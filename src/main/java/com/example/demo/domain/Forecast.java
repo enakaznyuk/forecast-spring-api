@@ -4,7 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
@@ -16,13 +15,13 @@ import java.time.format.DateTimeFormatter;
 public class Forecast {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotEmpty(message = "city can't be null")
+    @NotNull(message = "city can't be null")
     private String city;
 
-    @NotEmpty(message = "city can't be null")
+    @NotNull(message = "date can't be null")
     private LocalDate localTime;
     private BigDecimal temperature;
     private String weatherState;
@@ -56,7 +55,8 @@ public class Forecast {
 
     //внутри него должна быть валидация
     public void setLocalTimeFromString(String stringLocalTime) {
-        this.localTime = LocalDate.parse(stringLocalTime, DateTimeFormatter.ofPattern("yyyy-MM-dd H:mm"));;
+        this.localTime = LocalDate.parse(stringLocalTime, DateTimeFormatter.ofPattern("yyyy-MM-dd H:mm"));
+        ;
     }
 
     public BigDecimal getTemperature() {

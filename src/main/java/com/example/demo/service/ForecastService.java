@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,8 +24,6 @@ public class ForecastService {
     @Autowired
     private ForecastRepository forecastRepository;
 
-    //сделать через forecastDTO(пост через dto)
-    //конкретно тут добавить валидацию(не сохраняю, если отсутствует дата)
     public void addNewInfo(Forecast n) {
         forecastRepository.save(n);
     }
@@ -36,38 +33,35 @@ public class ForecastService {
         return forecastRepository.findAll();
     }
 
-    public List<ForecastOutDto> findAllForecast(){
+    public List<ForecastOutDto> findAllForecast() {
 
         Iterable<Forecast> forecasts = findAll();
         List<Forecast> forecastList = StreamSupport.stream(forecasts.spliterator(), false).toList();
-        //List<ForecastOutDto> forecastOutDtoList = forecastList.stream().map(v -> modelMapper.map(v, ForecastOutDto.class)).toList();
-
-
         return forecastList.stream().map(v -> modelMapper.map(v, ForecastOutDto.class)).toList();
     }
 
-    public Optional<Forecast> findById(Integer id){
+    public Optional<Forecast> findById(Integer id) {
 
         return forecastRepository.findById(id);
     }
 
-    public ForecastOutDto findByIdForecast(Integer id){
+    public ForecastOutDto findByIdForecast(Integer id) {
 
         Optional<Forecast> forecast = findById(id);
         return forecast.map(value -> modelMapper.map(value, ForecastOutDto.class)).orElse(null);
     }
 
-    public void deleteAll(){
+    public void deleteAll() {
 
         forecastRepository.deleteAll();
     }
 
-    public Optional<Forecast> getMostActualInformation(){
+    public Optional<Forecast> getMostActualInformation() {
 
         return forecastRepository.getMostValueInformation();
     }
 
-    public ForecastOutDto getMostActualForecast(){
+    public ForecastOutDto getMostActualForecast() {
 
         Optional<Forecast> forecast = getMostActualInformation();
         return forecast.map(value -> modelMapper.map(value, ForecastOutDto.class)).orElse(null);

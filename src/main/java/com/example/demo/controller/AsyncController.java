@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.Forecast;
-import com.example.demo.dto.ForecastOutDto;
 import com.example.demo.dto.RapidForecastDto;
 import com.example.demo.service.AsyncService;
 import com.example.demo.service.ForecastService;
@@ -27,24 +26,17 @@ public class AsyncController {
 
     private static final Logger LOGGER = LogManager.getLogger(AsyncController.class);
 
-    @Scheduled(cron = "0 * * * * ?")
+    @Scheduled(cron = "@daily")
     public void fillingTheDatabase() throws InterruptedException, JsonProcessingException {
 
         RapidForecastDto rapidForecastDto = asyncService.getInformationAboutWeather();
-        LOGGER.info(rapidForecastDto);
-        System.out.println(rapidForecastDto.getLocation().getLocalTime());
-
-
-
         saveToDataBase(rapidForecastDto);
+        LOGGER.info("Save object to DataBase");
     }
 
-    public void saveToDataBase(RapidForecastDto rapidForecastDto){
+    public void saveToDataBase(RapidForecastDto rapidForecastDto) {
 
-        System.out.println(rapidForecastDto);
         Forecast forecastAfterDto = modelMapper.map(rapidForecastDto, Forecast.class);
-        ForecastOutDto forecastOutDto = modelMapper.map(forecastAfterDto, ForecastOutDto.class);
-        System.out.println("forecastOutDto = " + forecastOutDto);
-        //forecastService.addNewInfo(forecastAfterDto);
+        forecastService.addNewInfo(forecastAfterDto);
     }
 }
