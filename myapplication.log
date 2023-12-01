@@ -4073,3 +4073,465 @@ jakarta.validation.ConstraintViolationException: getForecastById.id: должн�
 2023-12-01T15:35:51.126+03:00  INFO 1356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-12-01T15:35:51.130+03:00  INFO 1356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-12-01T15:35:51.137+03:00  INFO 1356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-01T15:42:42.538+03:00  INFO 18456 --- [restartedMain] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2 with PID 18456 (D:\Java\senla\forecast-spring-api\target\classes started by egorrrr in D:\Java\senla\forecast-spring-api)
+2023-12-01T15:42:42.539+03:00  INFO 18456 --- [restartedMain] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T15:42:42.588+03:00  INFO 18456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-01T15:42:42.588+03:00  INFO 18456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-01T15:42:43.217+03:00  INFO 18456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01T15:42:43.341+03:00  INFO 18456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interface.
+2023-12-01T15:42:43.953+03:00  INFO 18456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-01T15:42:43.962+03:00  INFO 18456 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-01T15:42:43.963+03:00  INFO 18456 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01T15:42:44.021+03:00  INFO 18456 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-01T15:42:44.021+03:00  INFO 18456 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1433 ms
+2023-12-01T15:42:44.174+03:00  INFO 18456 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01T15:42:44.225+03:00  INFO 18456 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01T15:42:44.258+03:00  INFO 18456 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-01T15:42:44.468+03:00  INFO 18456 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01T15:42:44.488+03:00  INFO 18456 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T15:42:44.743+03:00  INFO 18456 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41837337
+2023-12-01T15:42:44.745+03:00  INFO 18456 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T15:42:45.471+03:00  INFO 18456 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01T15:42:45.505+03:00  INFO 18456 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T15:42:46.017+03:00  INFO 18456 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-01T15:42:46.516+03:00  WARN 18456 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01T15:42:46.815+03:00  INFO 18456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-12-01T15:42:46.849+03:00  INFO 18456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-01T15:42:46.861+03:00  INFO 18456 --- [restartedMain] com.example.demo.DemoApplication         : Started DemoApplication in 4.716 seconds (process running for 5.184)
+2023-12-01T15:42:46.863+03:00  INFO 18456 --- [restartedMain] com.example.demo.service.AsyncService    : Looking up 
+2023-12-01T15:42:47.323+03:00 DEBUG 18456 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        forecast_seq for update
+2023-12-01T15:42:47.325+03:00 DEBUG 18456 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        forecast_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-12-01T15:42:47.382+03:00 DEBUG 18456 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        forecast
+        (city, local_time, precip, pressure, temperature, weather_state, wind, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-12-01T15:42:47.391+03:00  INFO 18456 --- [restartedMain] c.e.demo.controller.AsyncController      : Save object to DataBase
+2023-12-01T15:43:04.067+03:00  INFO 18456 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T15:43:04.070+03:00  INFO 18456 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T15:43:04.076+03:00  INFO 18456 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-01T15:49:35.319+03:00  INFO 17580 --- [main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 18.0.2 with PID 17580 (started by egorrrr in D:\Java\senla\forecast-spring-api)
+2023-12-01T15:49:35.320+03:00  INFO 17580 --- [main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T15:49:35.988+03:00  INFO 17580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01T15:49:36.135+03:00  INFO 17580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 1 JPA repository interface.
+2023-12-01T15:49:36.591+03:00  INFO 17580 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01T15:49:36.654+03:00  INFO 17580 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01T15:49:36.686+03:00  INFO 17580 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-01T15:49:36.972+03:00  INFO 17580 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01T15:49:36.996+03:00  INFO 17580 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T15:49:37.269+03:00  INFO 17580 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64757d56
+2023-12-01T15:49:37.271+03:00  INFO 17580 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T15:49:38.082+03:00  INFO 17580 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01T15:49:38.118+03:00  INFO 17580 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T15:49:38.650+03:00  INFO 17580 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-01T15:49:39.263+03:00  WARN 17580 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01T15:49:39.619+03:00  INFO 17580 --- [main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 4.599 seconds (process running for 5.616)
+2023-12-01T15:49:39.622+03:00  INFO 17580 --- [main] com.example.demo.service.AsyncService    : Looking up 
+2023-12-01T15:49:40.035+03:00 DEBUG 17580 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        forecast_seq for update
+2023-12-01T15:49:40.038+03:00 DEBUG 17580 --- [main] org.hibernate.SQL                        : 
+    update
+        forecast_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-12-01T15:49:40.137+03:00 DEBUG 17580 --- [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        forecast
+        (city, local_time, precip, pressure, temperature, weather_state, wind, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-12-01T15:49:40.154+03:00  INFO 17580 --- [main] c.e.demo.controller.AsyncController      : Save object to DataBase
+2023-12-01T15:49:40.654+03:00  INFO 17580 --- [main] com.example.demo.service.AsyncService    : Looking up 
+2023-12-01T15:49:40.804+03:00  INFO 17580 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T15:49:40.805+03:00  INFO 17580 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T15:49:40.813+03:00  INFO 17580 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-01T16:03:42.153+03:00  INFO 19068 --- [main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 18.0.2 with PID 19068 (started by egorrrr in D:\Java\senla\forecast-spring-api)
+2023-12-01T16:03:42.155+03:00  INFO 19068 --- [main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T16:03:42.751+03:00  INFO 19068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01T16:03:42.876+03:00  INFO 19068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 1 JPA repository interface.
+2023-12-01T16:03:43.304+03:00  INFO 19068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01T16:03:43.355+03:00  INFO 19068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01T16:03:43.389+03:00  INFO 19068 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-01T16:03:43.669+03:00  INFO 19068 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01T16:03:43.692+03:00  INFO 19068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T16:03:43.973+03:00  INFO 19068 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64757d56
+2023-12-01T16:03:43.974+03:00  INFO 19068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T16:03:44.782+03:00  INFO 19068 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01T16:03:44.818+03:00  INFO 19068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:03:45.352+03:00  INFO 19068 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-01T16:03:45.935+03:00  WARN 19068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01T16:03:46.299+03:00  INFO 19068 --- [main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 4.419 seconds (process running for 5.318)
+2023-12-01T16:03:46.302+03:00  INFO 19068 --- [main] com.example.demo.service.AsyncService    : Looking up 
+2023-12-01T16:03:46.787+03:00 DEBUG 19068 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        forecast_seq for update
+2023-12-01T16:03:46.789+03:00 DEBUG 19068 --- [main] org.hibernate.SQL                        : 
+    update
+        forecast_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-12-01T16:03:46.851+03:00 DEBUG 19068 --- [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        forecast
+        (city, local_time, precip, pressure, temperature, weather_state, wind, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-12-01T16:03:46.861+03:00  INFO 19068 --- [main] c.e.demo.controller.AsyncController      : Save object to DataBase
+2023-12-01T16:03:47.457+03:00 DEBUG 19068 --- [main] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:03:47.481+03:00 DEBUG 19068 --- [main] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:03:47.523+03:00  INFO 19068 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:03:47.525+03:00  INFO 19068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T16:03:47.532+03:00  INFO 19068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-01T16:04:17.122+03:00  INFO 10308 --- [main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 18.0.2 with PID 10308 (started by egorrrr in D:\Java\senla\forecast-spring-api)
+2023-12-01T16:04:17.123+03:00  INFO 10308 --- [main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T16:04:17.732+03:00  INFO 10308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01T16:04:17.863+03:00  INFO 10308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interface.
+2023-12-01T16:04:18.304+03:00  INFO 10308 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01T16:04:18.362+03:00  INFO 10308 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01T16:04:18.394+03:00  INFO 10308 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-01T16:04:18.669+03:00  INFO 10308 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01T16:04:18.692+03:00  INFO 10308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T16:04:18.960+03:00  INFO 10308 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64757d56
+2023-12-01T16:04:18.962+03:00  INFO 10308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T16:04:19.771+03:00  INFO 10308 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01T16:04:19.808+03:00  INFO 10308 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:04:20.355+03:00  INFO 10308 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-01T16:04:20.972+03:00  WARN 10308 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01T16:04:21.313+03:00  INFO 10308 --- [main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 4.458 seconds (process running for 5.384)
+2023-12-01T16:04:21.316+03:00  INFO 10308 --- [main] com.example.demo.service.AsyncService    : Looking up 
+2023-12-01T16:04:21.780+03:00 DEBUG 10308 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        forecast_seq for update
+2023-12-01T16:04:21.783+03:00 DEBUG 10308 --- [main] org.hibernate.SQL                        : 
+    update
+        forecast_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-12-01T16:04:21.842+03:00 DEBUG 10308 --- [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        forecast
+        (city, local_time, precip, pressure, temperature, weather_state, wind, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-12-01T16:04:21.852+03:00  INFO 10308 --- [main] c.e.demo.controller.AsyncController      : Save object to DataBase
+2023-12-01T16:04:22.485+03:00 DEBUG 10308 --- [main] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:04:22.508+03:00 DEBUG 10308 --- [main] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:04:22.547+03:00  INFO 10308 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:04:22.549+03:00  INFO 10308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T16:04:22.556+03:00  INFO 10308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-01T16:14:25.680+03:00  INFO 2756 --- [main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 18.0.2 with PID 2756 (started by egorrrr in D:\Java\senla\forecast-spring-api)
+2023-12-01T16:14:25.682+03:00  INFO 2756 --- [main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T16:14:26.324+03:00  INFO 2756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01T16:14:26.446+03:00  INFO 2756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+2023-12-01T16:14:26.876+03:00  INFO 2756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01T16:14:26.931+03:00  INFO 2756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01T16:14:26.964+03:00  INFO 2756 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-01T16:14:27.268+03:00  INFO 2756 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01T16:14:27.294+03:00  INFO 2756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T16:14:27.580+03:00  INFO 2756 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64757d56
+2023-12-01T16:14:27.582+03:00  INFO 2756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T16:14:28.386+03:00  INFO 2756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01T16:14:28.422+03:00  INFO 2756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:14:28.973+03:00  INFO 2756 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-01T16:14:29.577+03:00  WARN 2756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01T16:14:29.944+03:00  INFO 2756 --- [main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 4.539 seconds (process running for 5.459)
+2023-12-01T16:14:29.946+03:00  INFO 2756 --- [main] com.example.demo.service.AsyncService    : Looking up 
+2023-12-01T16:14:30.436+03:00 DEBUG 2756 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        forecast_seq for update
+2023-12-01T16:14:30.439+03:00 DEBUG 2756 --- [main] org.hibernate.SQL                        : 
+    update
+        forecast_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-12-01T16:14:30.501+03:00 DEBUG 2756 --- [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        forecast
+        (city, local_time, precip, pressure, temperature, weather_state, wind, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-12-01T16:14:30.512+03:00  INFO 2756 --- [main] c.e.demo.controller.AsyncController      : Save object to DataBase
+2023-12-01T16:14:31.085+03:00 DEBUG 2756 --- [main] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:14:31.109+03:00 DEBUG 2756 --- [main] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:14:31.148+03:00  INFO 2756 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:14:31.150+03:00  INFO 2756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T16:14:31.156+03:00  INFO 2756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-01T16:15:01.542+03:00  INFO 19236 --- [main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 18.0.2 with PID 19236 (started by egorrrr in D:\Java\senla\forecast-spring-api)
+2023-12-01T16:15:01.543+03:00  INFO 19236 --- [main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T16:15:02.149+03:00  INFO 19236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01T16:15:02.276+03:00  INFO 19236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2023-12-01T16:15:02.711+03:00  INFO 19236 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01T16:15:02.764+03:00  INFO 19236 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01T16:15:02.797+03:00  INFO 19236 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-01T16:15:03.088+03:00  INFO 19236 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01T16:15:03.114+03:00  INFO 19236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T16:15:03.402+03:00  INFO 19236 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64757d56
+2023-12-01T16:15:03.404+03:00  INFO 19236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T16:15:04.223+03:00  INFO 19236 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01T16:15:04.263+03:00  INFO 19236 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:15:04.795+03:00  INFO 19236 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-01T16:15:05.410+03:00  WARN 19236 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01T16:15:05.760+03:00  INFO 19236 --- [main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 4.489 seconds (process running for 5.423)
+2023-12-01T16:15:05.762+03:00  INFO 19236 --- [main] com.example.demo.service.AsyncService    : Looking up 
+2023-12-01T16:15:06.204+03:00 DEBUG 19236 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        forecast_seq for update
+2023-12-01T16:15:06.206+03:00 DEBUG 19236 --- [main] org.hibernate.SQL                        : 
+    update
+        forecast_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-12-01T16:15:06.266+03:00 DEBUG 19236 --- [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        forecast
+        (city, local_time, precip, pressure, temperature, weather_state, wind, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-12-01T16:15:06.276+03:00  INFO 19236 --- [main] c.e.demo.controller.AsyncController      : Save object to DataBase
+2023-12-01T16:15:06.847+03:00 DEBUG 19236 --- [main] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:15:06.871+03:00 DEBUG 19236 --- [main] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:15:06.911+03:00  INFO 19236 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:15:06.913+03:00  INFO 19236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T16:15:06.920+03:00  INFO 19236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-01T16:50:49.131+03:00  INFO 4556 --- [restartedMain] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2 with PID 4556 (D:\Java\senla\forecast-spring-api\target\classes started by egorrrr in D:\Java\senla\forecast-spring-api)
+2023-12-01T16:50:49.133+03:00  INFO 4556 --- [restartedMain] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T16:50:49.185+03:00  INFO 4556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-01T16:50:49.185+03:00  INFO 4556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-01T16:50:49.939+03:00  INFO 4556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01T16:50:50.067+03:00  INFO 4556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interface.
+2023-12-01T16:50:50.746+03:00  INFO 4556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-01T16:50:50.756+03:00  INFO 4556 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-01T16:50:50.757+03:00  INFO 4556 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01T16:50:50.820+03:00  INFO 4556 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-01T16:50:50.820+03:00  INFO 4556 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1635 ms
+2023-12-01T16:50:50.966+03:00  INFO 4556 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01T16:50:51.018+03:00  INFO 4556 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01T16:50:51.050+03:00  INFO 4556 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-01T16:50:51.268+03:00  INFO 4556 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01T16:50:51.291+03:00  INFO 4556 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T16:50:51.572+03:00  INFO 4556 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bf6856b
+2023-12-01T16:50:51.573+03:00  INFO 4556 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T16:50:52.342+03:00  INFO 4556 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01T16:50:52.379+03:00  INFO 4556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:50:52.978+03:00  INFO 4556 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-01T16:50:53.558+03:00  WARN 4556 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01T16:50:53.871+03:00  INFO 4556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-12-01T16:50:53.910+03:00  INFO 4556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-01T16:50:53.924+03:00  INFO 4556 --- [restartedMain] com.example.demo.DemoApplication         : Started DemoApplication in 5.199 seconds (process running for 5.737)
+2023-12-01T16:50:53.926+03:00  INFO 4556 --- [restartedMain] com.example.demo.service.AsyncService    : Looking up 
+2023-12-01T16:50:54.398+03:00 DEBUG 4556 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        forecast_seq for update
+2023-12-01T16:50:54.400+03:00 DEBUG 4556 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        forecast_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-12-01T16:50:54.459+03:00 DEBUG 4556 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        forecast
+        (city, local_time, precip, pressure, temperature, weather_state, wind, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-12-01T16:50:54.470+03:00  INFO 4556 --- [restartedMain] c.e.demo.controller.AsyncController      : Save object to DataBase
+2023-12-01T16:51:00.218+03:00  INFO 4556 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01T16:51:00.321+03:00 DEBUG 4556 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        f1_0.id,
+        f1_0.city,
+        f1_0.local_time,
+        f1_0.precip,
+        f1_0.pressure,
+        f1_0.temperature,
+        f1_0.weather_state,
+        f1_0.wind 
+    from
+        forecast f1_0
+2023-12-01T16:51:08.718+03:00 DEBUG 4556 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        f1_0.id,
+        f1_0.city,
+        f1_0.local_time,
+        f1_0.precip,
+        f1_0.pressure,
+        f1_0.temperature,
+        f1_0.weather_state,
+        f1_0.wind 
+    from
+        forecast f1_0 
+    where
+        f1_0.id=?
+2023-12-01T16:51:11.846+03:00 DEBUG 4556 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        forecast 
+    where
+        local_time = (
+            select
+                MAX(local_time) 
+            from
+                forecast
+        ) 
+    limit
+        1
+2023-12-01T16:51:14.416+03:00 DEBUG 4556 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        avg(f1_0.temperature),
+        avg(f1_0.wind),
+        avg(f1_0.pressure),
+        avg(f1_0.precip) 
+    from
+        forecast f1_0 
+    where
+        f1_0.local_time between ? and ?
+2023-12-01T16:51:16.959+03:00  INFO 4556 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T16:51:16.962+03:00  INFO 4556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T16:51:16.968+03:00  INFO 4556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
